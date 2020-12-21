@@ -1,5 +1,4 @@
-ErrorDocument 404 /index.html/
-ErrorDocument 500 /index.html/
-# or map them to one error document:
-# ErrorDocument 404 /pages/errors/error_redirect.php
-# ErrorDocument 500 /pages/errors/error_redirect.php
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /index.html [L]
